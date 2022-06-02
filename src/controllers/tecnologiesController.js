@@ -11,3 +11,5 @@ tecnologiesControllers.postTecnology = (req, res) => {
 tecnologiesControllers.getAllTecnologies = (req, res) => {
     res.send('toma te doy todas las tecnologias');
 }
+
+module.exports = tecnologiesControllers;

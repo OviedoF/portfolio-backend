@@ -8,6 +8,9 @@ projectsController.getAllProjects = (req, res) => {
     res.send('toma te mando todos los proyectos');
 }
 
-projectsController.postPorjesct = (req, res) => {
-    res.send('gracias por postear un proyecto')
+projectsController.postProject = (req, res) => {
+    console.log(req.file);
+    res.send('gracias por postear un proyecto');
 }
+
+module.exports = projectsController;
