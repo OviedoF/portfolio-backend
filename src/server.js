@@ -1,10 +1,13 @@
 const express = require('express');
 const path = require('path');
 const ejs = require('ejs');
+const bodyparser = require('body-parser');
 
 /* INITIALIZE */
+require('dotenv').config();
 const port = process.env.PORT || 4000;
 const app = express();
+require('./mongoDB');
 /* -------- */
 
 /* settings */
@@ -13,9 +16,10 @@ app.set('views', path.join(__dirname, 'views'));
 /* -------- */
 
 /* middlewares */
+app.use(bodyparser.json());
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require(path.join(__dirname, 'config/multer.config')));
 /* -------- */
