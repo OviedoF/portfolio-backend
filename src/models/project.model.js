@@ -16,7 +16,9 @@ const projectSchema = new Schema ({
 });
 
 projectSchema.methods.setImgUrl = (filename) => {
-    this.imgUrl = `${__dirname}/images/${filename}`;
+    console.log('hola toy guardando el filename')
+    this.imgUrl = `http://localhost:4000/images/${filename}`;
+    console.log('hola ya guardè el filename');
 }
 
 const projectModel = mongoose.model('project', projectSchema);

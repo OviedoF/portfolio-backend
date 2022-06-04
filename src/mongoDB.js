@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
  
-const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.qhvux.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.brbbm.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 //protocolo://host:puerto/nombreBBDD
  
 mongoose.connect(uri, {

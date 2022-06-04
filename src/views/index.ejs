@@ -9,6 +9,11 @@
 <body>
     <h1>Mira mi api papu</h1>
 
+    <hr>
+    <h2>Projects</h2>
+
+    <a href="/api/projects">Ver los proyectos</a>
+
     <form action="/api/projects" method="post" enctype="multipart/form-data">
         <input type="text" name="name" id="">
         <br> <br>        
@@ -17,5 +22,20 @@
         <input type="text" name="description" id="">
         <button type="submit">Upload</button>
     </form>
+
+    <hr>
+
+    <h2>Tecnologies</h2>
+    <a href="/api/tecnologies">Ver las tecnologías</a>
+
+    <form action="/api/tecnologies" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" id="" placeholder="nombre de la tecnologia">
+        <br><br>
+        <input type="file" name="image" id="">
+        <br><br>
+        <textarea name="description" id="" placeholder="descripción" cols="30" rows="10"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
 </body>
 </html>

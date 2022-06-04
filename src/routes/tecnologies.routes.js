@@ -8,4 +8,8 @@ router.get('/:id', tecnologiesController.getTecnology);
 
 router.post('/', tecnologiesController.postTecnology);
 
+router.delete('/:id', tecnologiesController.deleteTecnology);
+
+router.put('/:id', tecnologiesController.updateTecnology);
+
 module.exports = router;
